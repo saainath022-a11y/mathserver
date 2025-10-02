@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lamp Power Calculator</title>
+</head>
+{%load static%}
+<body bgcolor="yellow">
+    <center>
+    <h1 {
+font-family:verdana;
+style="color:red;"
+    }>Power of Lamp Filament</h1>
+    <form method="POST">
+        {% csrf_token %}
+        Intensity (I): <input type="text" name="intensity" value="{{ I }}"><br><br>
+        Resistance (R): <input type="text" name="resistance" value="{{ R }}"><br><br>
+        <input type="submit" value="Calculate Power">
+    </form>
+
+    {% if power %}
+        <h2>Power (P) = {{ power }} watts</h2>
+    {% endif %}
+    </center>
+</body>
+</html>
+  
+
+
+
