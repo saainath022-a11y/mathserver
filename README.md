@@ -34,9 +34,28 @@ Publish the website in the given URL.
 <html>
 <head>
     <title>Lamp Power Calculator</title>
+    <style>
+        body {
+            font-family: 'segoe ui', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+    </style>
 </head>
 {%load static%}
-<body bgcolor="yellow">
+<body>
+    <div class="container">
     <center>
     <h1 {
 font-family:verdana;
@@ -53,8 +72,10 @@ style="color:red;"
         <h2>Power (P) = {{ power }} watts</h2>
     {% endif %}
     </center>
+    </div>
 </body>
 </html>
+  
 
 views.py
 
@@ -99,8 +120,8 @@ urlpatterns = [
 
 
 # SERVER SIDE PROCESSING:
-![alt text](<Screenshot (13).png>)
+![alt text](<Screenshot (16).png>)
 # HOMEPAGE:
-![alt text](<Screenshot (12).png>)
+![alt text](<Screenshot (14).png>)
 # RESULT:
 The program for performing server side processing is completed successfully.
